@@ -22,8 +22,6 @@ int led_RED_up = 3;
 //BUTTONS
 int button_left = 12;
 int button_right = A2;
-int button_up = A3;
-int button_down = A4;
 
 int counter =0;
 //int left=0,right =0,up=0,down=0;
@@ -70,19 +68,15 @@ void setup()  {
 
   pinMode(button_left, INPUT);
   pinMode(button_right, INPUT);
-  pinMode(button_up, INPUT);
-  pinMode(button_down, INPUT);
   Serial.begin(9600);
 
 
-  digitalWrite(button_left,LOW);
-  digitalWrite(button_right,LOW);
-  digitalWrite(button_up,LOW);
-  digitalWrite(button_down,LOW);
+  digitalWrite(button_left,HIGH);
+  digitalWrite(button_right,HIGH);
 
-  digitalWrite(led_RED_left, LOW);
+  digitalWrite(led_RED_left, HIGH);
   digitalWrite(led_YELLOW_left , LOW);
-  digitalWrite(led_GREEN_left, HIGH);
+  digitalWrite(led_GREEN_left, LOW);
 
   digitalWrite(led_RED_down, HIGH);
   digitalWrite(led_YELLOW_down, LOW);
@@ -92,9 +86,9 @@ void setup()  {
   digitalWrite(led_YELLOW_right, LOW);
   digitalWrite(led_GREEN_right, LOW);
 
-  digitalWrite(led_RED_up, HIGH);
+  digitalWrite(led_RED_up, LOW);
   digitalWrite(led_YELLOW_up, LOW);
-  digitalWrite(led_GREEN_up, LOW);
+  digitalWrite(led_GREEN_up, HIGH);
 
 
 
@@ -111,26 +105,26 @@ void loop()
       digitalWrite(led_YELLOW_up, HIGH);
       digitalWrite(led_YELLOW_down, HIGH);
       digitalWrite(led_YELLOW_right, HIGH);
-      digitalWrite(led_YELLOW_left, HIGH);
-  		delay(100);
+      digitalWrite(led_YELLOW_left, HIGH);   
+  		delay(100);               
       digitalWrite(led_YELLOW_up, LOW);
       digitalWrite(led_YELLOW_down, LOW);
       digitalWrite(led_YELLOW_right, LOW);
-      digitalWrite(led_YELLOW_left, LOW);
-  		delay(100);
+      digitalWrite(led_YELLOW_left, LOW);    
+  		delay(100);              
 
       state = LOW;
     }else{
       digitalWrite(led_YELLOW_up, HIGH);
       digitalWrite(led_YELLOW_down, HIGH);
       digitalWrite(led_YELLOW_right, HIGH);
-      digitalWrite(led_YELLOW_left, HIGH);
-      delay(100);
+      digitalWrite(led_YELLOW_left, HIGH);   
+      delay(100);               
       digitalWrite(led_YELLOW_up, LOW);
       digitalWrite(led_YELLOW_down, LOW);
       digitalWrite(led_YELLOW_right, LOW);
-      digitalWrite(led_YELLOW_left, LOW);
-      delay(100);
+      digitalWrite(led_YELLOW_left, LOW);    
+      delay(100); 
       state = HIGH;
     }
 
@@ -140,28 +134,28 @@ void loop()
       digitalWrite(led_YELLOW_up, HIGH);
       digitalWrite(led_YELLOW_down, HIGH);
       digitalWrite(led_YELLOW_right, HIGH);
-      digitalWrite(led_YELLOW_left, HIGH);
-      delay(100);
+      digitalWrite(led_YELLOW_left, HIGH);   
+      delay(100);               
       digitalWrite(led_YELLOW_up, LOW);
       digitalWrite(led_YELLOW_down, LOW);
       digitalWrite(led_YELLOW_right, LOW);
-      digitalWrite(led_YELLOW_left, LOW);
-      delay(100);
-
-      state1 = LOW;
+      digitalWrite(led_YELLOW_left, LOW);    
+      delay(100); 
+      
+      state1 = LOW;            
     }else{
       digitalWrite(led_YELLOW_up, HIGH);
       digitalWrite(led_YELLOW_down, HIGH);
       digitalWrite(led_YELLOW_right, HIGH);
-      digitalWrite(led_YELLOW_left, HIGH);
-      delay(100);
+      digitalWrite(led_YELLOW_left, HIGH);   
+      delay(100);               
       digitalWrite(led_YELLOW_up, LOW);
       digitalWrite(led_YELLOW_down, LOW);
       digitalWrite(led_YELLOW_right, LOW);
-      digitalWrite(led_YELLOW_left, LOW);
-      delay(100);
+      digitalWrite(led_YELLOW_left, LOW);    
+      delay(100); 
       state1 = HIGH;
-
+      
     }
 
     time1 = millis();
