@@ -4,4 +4,4 @@ In this project,a single device which can control a cross-road traffic using 2 s
 
 ## Circuit Diagram of Manual traffic signal system
 
-![circuit_diagram](https://user-images.githubusercontent.com/12596490/43398621-704ea994-942a-11e8-99d7-8d8c038087e9.PNG)
+![circuit_diagram](https://raw.githubusercontent.com/sarkerrabi/Manual-Traffic-Signal-System/master/images/circuit_diagram.png)
